@@ -3,14 +3,14 @@
 Template Nuxt with most common configuration to a based set with Nuxt, by Ctwhome
 
 ```
-npx degit ctwhome/nuxt-basis <directory-name>
+npx degit ctwhome/nuxt <directory-name>
 ```
 
 ### Includes:
 
 *   Nuxt Vite
 *   Nuxt content
-*   Tailwindcss with JIT
+*   TailwindCss with JIT
 *   DaisyUI for Tailwindcss
 *   ESLint with 'fix on save'
 *   Common VSCode settings for Nuxt and ESLint
