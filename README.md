@@ -1,4 +1,18 @@
-# nuxt-basis
+# nuxt-basis start
+
+Template Nuxt with most common configuration to a based set with Nuxt, by Ctwhome
+
+```
+npx degit ctwhome/nuxt-basis
+```
+
+### Includes:
+
+*   Nuxt Vite
+*   Nuxt content
+*   Tailwindcss with JIT
+*   ESLint with 'fix on save'
+*   Common VSCode settings for Nuxt and ESLint
 
 ## Build Setup
 
@@ -40,7 +54,6 @@ More information about the usage of this directory in [the documentation](https:
 Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
 
 ### `pages`
 
