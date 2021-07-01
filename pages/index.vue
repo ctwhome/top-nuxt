@@ -1,9 +1,6 @@
 <template>
-  <div class="flex flex-col w-screen h-screen bg-green-500">
+  <div class="flex flex-col w-screen h-screen bg-base-200">
     <nuxt-content :document="page" class="p-10 prose" />
-    <div class="w-full btn">
-      Button
-    </div>
   </div>
 </template>
 
