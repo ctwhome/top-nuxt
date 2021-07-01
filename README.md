@@ -3,7 +3,7 @@
 Template Nuxt with most common configuration to a based set with Nuxt, by Ctwhome
 
 ```
-npx degit ctwhome/nuxt-basis
+npx degit ctwhome/nuxt-basis <directory-name>
 ```
 
 ### Includes:
