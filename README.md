@@ -1,4 +1,4 @@
-# nuxt-basis start
+# Nuxt start template
 
 Template Nuxt with most common configuration to a based set with Nuxt, by Ctwhome
 
