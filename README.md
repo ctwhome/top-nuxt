@@ -11,6 +11,7 @@ npx degit ctwhome/nuxt-basis
 *   Nuxt Vite
 *   Nuxt content
 *   Tailwindcss with JIT
+*   DaisyUI for Tailwindcss
 *   ESLint with 'fix on save'
 *   Common VSCode settings for Nuxt and ESLint
 
