@@ -15,17 +15,6 @@
     "prepush": "yarn lint:fix",
     "prepare": "husky install"
   },
-  "lint-staged": {
-    "*.{js,vue}": [
-      "yarn lint:fix",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/composition-api": "^0.24.5",
@@ -46,7 +35,6 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
     "husky": "^7.0.1",
-    "lint-staged": "^11.0.0",
     "nuxt-vite": "^0.1.1",
     "postcss": "^8.3.5"
   }
