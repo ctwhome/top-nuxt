@@ -10,7 +10,8 @@
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js",
     "lint:fix": "yarn lint:js --fix",
-    "precommit": "yarn lint:fix"
+    "precommit": "yarn lint:fix",
+    "prepush": "yarn lint:fix"
   },
   "lint-staged": {
     "*.{js,vue}": "lint:fix"
