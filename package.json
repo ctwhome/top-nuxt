@@ -10,6 +10,11 @@
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint"
+    }
+  },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/composition-api": "^0.24.5",
@@ -17,6 +22,8 @@
     "@tailwindcss/typography": "^0.4.1",
     "core-js": "^3.15.1",
     "daisyui": "^1.6.0",
+    "gsap": "^3.7.0",
+    "imagesloaded": "^4.1.4",
     "nuxt": "^2.15.7"
   },
   "devDependencies": {
@@ -27,6 +34,7 @@
     "eslint": "^7.29.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
+    "husky": "^7.0.1",
     "nuxt-vite": "^0.1.1",
     "postcss": "^8.3.5"
   }

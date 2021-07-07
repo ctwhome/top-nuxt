@@ -1,3 +1,4 @@
+const isDev = process.env.NODE_ENV === 'development'
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -7,7 +8,7 @@ export default {
   // http://<username>.github.io/<repository-name>.
   router: {
     // base: '/<repository-name>/'
-    base: '/nuxt/'
+    base: isDev ? '/' : '/nuxt/'
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -29,6 +30,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    'assets/css/main.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

@@ -22,6 +22,10 @@
 
 
 
+
+
+
+
         <NuxtLink
           :to="{ name: 'blog-slug', params: { slug: article.slug } }"
           class="flex transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md xxlmax:flex-col"
