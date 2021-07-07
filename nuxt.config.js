@@ -3,6 +3,13 @@ export default {
   target: 'static',
   ssr: false,
 
+  // If deploying on github pages
+  // http://<username>.github.io/<repository-name>.
+  router: {
+    // base: '/<repository-name>/'
+    base: '/nuxt/'
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'nuxt-basis',
