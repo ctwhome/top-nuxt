@@ -7,18 +7,22 @@
         :src="tag.img"
         :alt="tag.name"
         class="absolute h-full w-full object-cover"
-      />
+      >
     </div>
 
-    <div class="overlay"></div>
+    <div class="overlay" />
     <div class="absolute top-32 left-32 right-32 text-white">
-      <NuxtLink to="/"><Logo /></NuxtLink>
+      <NuxtLink to="/">
+        <Logo />
+      </NuxtLink>
       <div class="mt-16 -mb-3 flex flex-col text-sm">
         <div class="relative lg:w-1/2 xs:w-full xs:h-84 lg:h-full post-left">
           <h1 class="text-4xl font-bold uppercase">
             {{ tag.name }}
           </h1>
-          <p class="mb-4 uppercase">{{ tag.description }}</p>
+          <p class="mb-4 uppercase">
+            {{ tag.description }}
+          </p>
 
           <nuxt-content :document="tag" />
         </div>
@@ -27,10 +31,16 @@
     <div
       class="relative xs:py-8 xs:px-8 lg:py-32 lg:px-16 lg:w-1/2 xs:w-full h-full overflow-y-scroll markdown-body post-right custom-scroll"
     >
-      <NuxtLink to="/"
-        ><p class="hover:underline">Back to All Articles</p></NuxtLink
+      <NuxtLink
+        to="/"
       >
-      <h3 class="mb-4 font-bold text-4xl">Articles tagged {{ tag.name }}:</h3>
+        <p class="hover:underline">
+          Back to All Articles
+        </p>
+      </NuxtLink>
+      <h3 class="mb-4 font-bold text-4xl">
+        Articles tagged {{ tag.name }}:
+      </h3>
       <ul>
         <li
           v-for="article in articles"
@@ -46,12 +56,14 @@
               class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
               :src="article.img"
               :alt="article.alt"
-            />
+            >
 
             <div
               class="p-6 flex flex-col justify-between xxlmin:w-1/2 xxlmax:w-full"
             >
-              <h2 class="font-bold">{{ article.title }}</h2>
+              <h2 class="font-bold">
+                {{ article.title }}
+              </h2>
               <p>{{ article.description }}</p>
               <p class="font-bold text-gray-600 text-sm">
                 {{ formatDate(article.updatedAt) }}
@@ -66,7 +78,7 @@
 
 <script>
 export default {
-  async asyncData({ $content, params }) {
+  async asyncData ({ $content, params }) {
     const tags = await $content('tags')
       .where({ slug: { $contains: params.tag } })
       .limit(1)
@@ -82,7 +94,7 @@ export default {
     }
   },
   methods: {
-    formatDate(date) {
+    formatDate (date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
     }

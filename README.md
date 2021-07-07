@@ -8,12 +8,13 @@ npx degit ctwhome/nuxt <directory-name>
 
 ### Includes:
 
-*   Nuxt Vite
+*   Nuxt Vite (Experimenal with issues, TailwindCSS JIT not workign with nuxt-vite)
 *   Nuxt content
 *   TailwindCss with JIT
 *   DaisyUI for Tailwindcss
 *   ESLint with 'fix on save'
 *   Common VSCode settings for Nuxt and ESLint
+*   Nuxt transitions
 
 ## Build Setup
 
@@ -30,6 +31,9 @@ $ yarn start
 
 # generate static project
 $ yarn generate
+
+# generate and local test
+$ yarn enerate && yarn star yarn generate && yarn start
 ```
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
