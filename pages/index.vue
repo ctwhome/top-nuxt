@@ -1,28 +1,10 @@
 <template>
   <div class="m-8">
     <TheHeader />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <h1 class="font-bold text-4xl">
       Blog Posts
     </h1>
-    <ul class="flex flex-wrap">
+    <ul v-if="articles" class="flex flex-wrap">
       <li
         v-for="article of articles"
         :key="article.slug"
@@ -37,24 +19,6 @@
             class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
             :src="article.img"
           >
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
           <div
             class="p-6 flex flex-col justify-between xxlmin:w-1/2 xxlmax:w-full"

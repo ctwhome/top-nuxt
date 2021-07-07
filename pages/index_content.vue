@@ -2,7 +2,6 @@
   <div class="flex flex-col w-screen h-screen bg-base-200">
     <nuxt-link to="/article">
       <div ref="wrapper" class="city paris">
-        hello
         <img ref="img" width="300" src="@/assets/img/paris.jpg" alt="paris">
       </div>
     </nuxt-link>
