@@ -1,7 +1,7 @@
 {
   "name": "nuxt-basis",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -14,7 +14,7 @@
     "prepush": "yarn lint:fix"
   },
   "lint-staged": {
-    "*.{js,vue}": "lint:fix"
+    "*.{js,vue}": ["yarn lint:fix", "git add"]
   },
   "husky": {
     "hooks": {
