@@ -19,7 +19,7 @@
           </p>
           <span class="mr-3">•</span>
           <p>{{ article.author.name }}</p>
-        </div>
+        </div>int
         <h1 class="text-6xl font-bold">
           {{ article.title }}
         </h1>
@@ -40,12 +40,7 @@
         >
           All articles
         </NuxtLink>
-        <a
-          href="https://nuxtjs.org/blog/creating-blog-with-nuxt-content"
-          class="mr-8 self-center text-white font-bold hover:underline"
-        >
-          Tutorial
-        </a>
+
         <AppSearchInput />
       </div>
     </div>
@@ -83,7 +78,7 @@
         </ul>
       </nav>
       <!-- content from markdown -->
-      <nuxt-content :document="article" />
+      <nuxt-content :document="article" class="prose prose-purple" />
       <!-- content author component -->
       <author :author="article.author" />
       <!-- prevNext component -->
@@ -93,6 +88,7 @@
 </template>
 <script>
 export default {
+  transition: 'fade',
   async asyncData ({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
     const tagsList = await $content('tags')
@@ -121,22 +117,5 @@ export default {
 }
 </script>
 <style>
-.nuxt-content p {
-  margin-bottom: 20px;
-}
-.nuxt-content h2 {
-  font-weight: bold;
-  font-size: 28px;
-}
-.nuxt-content h3 {
-  font-weight: bold;
-  font-size: 22px;
-}
-.icon.icon-link {
-  background-image: url('~assets/svg/icon-hashtag.svg');
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-size: 20px 20px;
-}
+
 </style>

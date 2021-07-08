@@ -1,6 +1,11 @@
 <template>
-  <div class="m-8">
+  <div class="">
     <TheHeader />
+    <nuxt-link to="/article">
+      <div ref="wrapper" class="city paris">
+        <img ref="img" width="300" src="@/assets/img/paris.jpg" alt="paris">
+      </div>
+    </nuxt-link>
     <h1 class="font-bold text-4xl">
       Blog Posts
     </h1>
@@ -52,21 +57,6 @@
         </NuxtLink>
       </li>
     </ul>
-    <footer class="flex justify-center border-gray-500 border-t-2">
-      <p class="mt-4">
-        Created by
-        <a
-          href="https://twitter.com/debs_obrien"
-          class="font-bold hover:underline"
-        >Debbie O'Brien</a>
-        at NuxtJS. See the
-        <a
-          href="https://nuxtjs.org/blog/creating-blog-with-nuxt-content"
-          class="font-bold hover:underline"
-        >tutorial</a>
-        for how to build it.
-      </p>
-    </footer>
   </div>
 </template>
 
