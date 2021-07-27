@@ -8,7 +8,7 @@ npx degit ctwhome/nuxt <directory-name>
 
 ### Includes:
 
-*   Nuxt Vite (Experimental with issues, TailwindCSS JIT not working with nuxt-vite)
+*   Nuxt Vite (Experimental with issues, TailwindCSS JIT not working with nuxt-vite: [issue](https://github.com/nuxt/vite/issues/159))
 *   Nuxt content
 *   TailwindCss with JIT
 *   DaisyUI for Tailwindcss
@@ -23,7 +23,7 @@ DaisyUI offers the ability to theme your application with many default themes or
 Daisy UI has the next utility classes where the theme will be applied (check the previous link for more details):
 
 ```
-	bg-{COLOR_NAME}
+    bg-{COLOR_NAME}
     text-{COLOR_NAME}
     border-{COLOR_NAME}
     from-{COLOR_NAME}
