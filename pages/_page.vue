@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen">
     <nuxt-content :document="content" class="prose p-20" />
-    <div v-if="!!error" class="mt-60 p-20 bg-green-300 prose">
+    <div v-if="!!error" class="mt-60 p-20 text-base-content bg-primary prose">
       <h3>
         Page not found
         <div class="btn btn-ghost" @click="$router.push('/')">
@@ -13,7 +13,9 @@
 </template>
 
 <script>
+import MainHeader from '~/components/MainHeader'
 export default {
+  components: { MainHeader },
   transition: 'fade',
   data () {
     return {

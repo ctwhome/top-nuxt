@@ -3,7 +3,7 @@
     <NuxtLink to="/">
       <Logo class="mb-4" />
     </NuxtLink>
-    <AppSearchInput class="ml-8" />
+    <AppSearchInput class="ml-8 p-2" />
     <daisyui-theme-switcher />
   </header>
 </template>

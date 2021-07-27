@@ -13,20 +13,19 @@
       <li
         v-for="article of articles"
         :key="article.slug"
-        class="xs:w-full md:w-1/2 px-2 xs:mb-6 md:mb-12 article-card"
+        class="xs:w-full md:w-1/2 px-2 xs:mb-6 md:mb-12"
       >
         <NuxtLink
           :to="{ name: 'blog-slug', params: { slug: article.slug } }"
-          class="flex transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md xxlmax:flex-col"
+          class="flex transition-shadow duration-150 ease-in-out shadow hover:shadow-xl xxlmax:flex-col bg-base-100  text-base-content"
         >
           <img
             v-if="article.img"
-            class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
+            class="w-48 h-48 xxlmax:w-full object-cover"
             :src="article.img"
           >
-
           <div
-            class="p-6 flex flex-col justify-between xxlmin:w-1/2 xxlmax:w-full"
+            class="p-6 flex flex-col justify-between"
           >
             <h2 class="font-bold">
               {{ article.title }}
@@ -76,19 +75,5 @@ export default {
       tags
     }
   }
-
 }
 </script>
-
-<style class="postcss">
-.article-card {
-  border-radius: 8px;
-}
-.article-card a {
-  background-color: #fff;
-  border-radius: 8px;
-}
-.article-card img div {
-  border-radius: 8px 0 0 8px;
-}
-</style>
