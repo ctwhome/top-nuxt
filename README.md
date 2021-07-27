@@ -8,13 +8,40 @@ npx degit ctwhome/nuxt <directory-name>
 
 ### Includes:
 
-*   Nuxt Vite (Experimenal with issues, TailwindCSS JIT not workign with nuxt-vite)
+*   Nuxt Vite (Experimental with issues, TailwindCSS JIT not working with nuxt-vite)
 *   Nuxt content
 *   TailwindCss with JIT
 *   DaisyUI for Tailwindcss
 *   ESLint with 'fix on save'
 *   Common VSCode settings for Nuxt and ESLint
 *   Nuxt transitions
+
+## Theming
+
+DaisyUI offers the ability to theme your application with many default themes or create your own [here](https://daisyui.com/core/colors).
+
+Daisy UI has the next utility classes where the theme will be applied (check the previous link for more details):
+
+```
+	bg-{COLOR_NAME}
+    text-{COLOR_NAME}
+    border-{COLOR_NAME}
+    from-{COLOR_NAME}
+    via-{COLOR_NAME}
+    to-{COLOR_NAME}
+    placeholder-{COLOR_NAME}
+    divide-{COLOR_NAME}
+    ring-{COLOR_NAME}
+
+
+
+
+    ring-offset-{COLOR_NAME}
+```
+
+### Switching themes
+
+*   An NPM component can be installed to handle easily global themes that keep it after refreshing the page: saadeghi/theme-change
 
 ## Build Setup
 
@@ -36,7 +63,7 @@ $ yarn generate
 $ yarn enerate && yarn star yarn generate && yarn start
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+For a detailed explanation of how things work, check out the [documentation](https://nuxtjs.org).
 
 ## Special Directories
 
