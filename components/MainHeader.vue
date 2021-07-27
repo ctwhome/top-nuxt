@@ -4,5 +4,6 @@
       <Logo class="mb-4" />
     </NuxtLink>
     <AppSearchInput class="ml-8" />
+    <daisyui-theme-switcher />
   </header>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <TheHeader />
+    <main-header />
     <nuxt-link to="/article">
       <div ref="wrapper" class="city paris">
         <img ref="img" width="300" src="@/assets/img/paris.jpg" alt="paris">
