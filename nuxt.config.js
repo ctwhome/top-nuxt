@@ -1,5 +1,10 @@
 const isDev = process.env.NODE_ENV === 'development'
 export default {
+  // Debug local server from outside
+  server: {
+    host: '0' // default: localhost
+  },
+
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   ssr: false,
