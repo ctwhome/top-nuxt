@@ -25,7 +25,8 @@
     "daisyui": "^1.6.1",
     "gsap": "^3.7.0",
     "imagesloaded": "^4.1.4",
-    "nuxt": "^2.15.7"
+    "nuxt": "^2.15.7",
+    "theme-change": "^2.0.2"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
