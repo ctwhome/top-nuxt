@@ -15,6 +15,7 @@ npx degit ctwhome/nuxt <directory-name>
 *   ESLint with 'fix on save'
 *   Common VSCode settings for Nuxt and ESLint
 *   Nuxt transitions
+*   Ngrok exposes your localhost to the world for easy testing and sharing!
 
 ## Theming
 

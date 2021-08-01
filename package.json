@@ -17,27 +17,29 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
-    "@nuxtjs/composition-api": "^0.24.6",
+    "@nuxtjs/composition-api": "^0.26.0",
+    "@nuxtjs/ngrok": "^2.0.0",
     "@nuxtjs/pwa": "^3.3.5",
+    "@supabase/supabase-js": "^1.21.0",
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/typography": "^0.4.1",
-    "core-js": "^3.15.2",
-    "daisyui": "^1.6.1",
-    "gsap": "^3.7.0",
+    "core-js": "^3.16.0",
+    "daisyui": "^1.10.0",
     "imagesloaded": "^4.1.4",
+    "lodash.isequal": "^4.5.0",
     "nuxt": "^2.15.7",
     "theme-change": "^2.0.2"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.14.7",
+    "@babel/eslint-parser": "^7.14.9",
     "@nuxtjs/eslint-config": "^6.0.1",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/tailwindcss": "^4.2.1",
-    "eslint": "^7.30.0",
+    "eslint": "^7.32.0",
     "eslint-plugin-nuxt": "^2.0.0",
-    "eslint-plugin-vue": "^7.13.0",
+    "eslint-plugin-vue": "^7.15.0",
     "husky": "^7.0.1",
     "nuxt-vite": "^0.1.1",
-    "postcss": "^8.3.5"
+    "postcss": "^8.3.6"
   }
 }

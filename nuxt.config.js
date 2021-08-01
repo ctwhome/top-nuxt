@@ -1,4 +1,5 @@
 const isDev = process.env.NODE_ENV === 'development'
+const useLocalSupabase = false
 export default {
   // Debug local server from outside
   server: {
@@ -8,6 +9,17 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   ssr: false,
+
+  // Environment variables
+  publicRuntimeConfig: {
+    supabaseUrl: isDev && useLocalSupabase
+      ? 'http://localhost:8000'
+      : process.env.NUXT_ENV_SUPABASE_URL,
+    supabaseKey: isDev && useLocalSupabase
+      // super-secret-jwt-token-with-at-least-32-characters-long
+      ? 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzdXBhYmFzZSIsImlhdCI6MTYwMzk2ODgzNCwiZXhwIjoyNTUwNjUzNjM0LCJhdWQiOiIiLCJzdWIiOiIiLCJSb2xlIjoicG9zdGdyZXMifQ.magCcozTMKNrl76Tj2dsM7XTl_YH0v0ilajzAvIlw3U'
+      : process.env.NUXT_ENV_SUPABASE_KEY
+  },
 
   // If deploying on github pages
   // http://<username>.github.io/<repository-name>.
@@ -40,7 +52,14 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    // { src: '~/plugins/supabase', ssr: false }
   ],
+  vite: {
+    optimizeDeps: {
+      exclude: ['@supabase/supabase-js'], // Supabase
+      include: ['cross-fetch', 'websocket'] // Supabase
+    }
+  },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

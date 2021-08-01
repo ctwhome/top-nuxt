@@ -5,5 +5,6 @@
     </NuxtLink>
     <AppSearchInput class="ml-8 p-2" />
     <daisyui-theme-switcher />
+    <user-login-button class="ml-auto" />
   </header>
 </template>
