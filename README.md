@@ -1,5 +1,7 @@
 # Nuxt start template
 
+\[!\[cd\](https://github.com/ctwhome/nuxt/actions/workflows/cd.yml/badge.svg)](https://github.com/ctwhome/nuxt/actions/workflows/cd.yml)
+
 Template Nuxt with most common configuration to a based set with Nuxt, by Ctwhome
 
 ```
