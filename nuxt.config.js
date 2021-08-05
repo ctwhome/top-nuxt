@@ -6,7 +6,7 @@ const useLocalSupabase = false
 const siteTitle = 'Ctw Nuxt Basis - Template'
 const siteDescription = 'Ctw Nuxt base template with TailwindCss, content RSS, Supabase Auth, Composition API and many other goodies'
 const twitterUser = '@ctwhome'
-const isGithubPages = false // true if deployed to github pages
+const isGithubPages = true // true if deployed to github pages
 const githubRepositoryName = 'nuxt'
 /// //////////////////////////////////////////////
 
