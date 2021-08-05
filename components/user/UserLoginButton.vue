@@ -46,7 +46,7 @@
         </svg>
 
         <div class="whitespace-nowrap">
-          Login with Google
+          Login <span class="hidden sm:inline"> with Google</span>
         </div>
       </button>
     </div>
