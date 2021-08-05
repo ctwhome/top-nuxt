@@ -3,7 +3,8 @@
 // Domain where the website will be deployed
 const productionUrl = 'MY-APP-DOMAIN.netlify.app'
 const useLocalSupabase = false
-const siteTitle = 'Ctw Nuxt Basis - Template'
+const siteName = 'Ctw Nuxt Basis - Template'
+const siteShortName = 'Nuxt Template'
 const siteDescription = 'Ctw Nuxt base template with TailwindCss, content RSS, Supabase Auth, Composition API and many other goodies'
 const twitterUser = '@ctwhome'
 const isGithubPages = true // true if deployed to github pages
@@ -50,10 +51,10 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
       // OG Social Media Cards
       { hid: 'description', name: 'description', content: siteDescription },
-      { property: 'og:site_name', content: siteTitle },
+      { property: 'og:site_name', content: siteName },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: `https://${productionUrl}` },
-      { hid: 'og:title', property: 'og:title', content: siteTitle },
+      { hid: 'og:title', property: 'og:title', content: siteName },
       { hid: 'og:description', property: 'og:description', content: siteDescription },
       { hid: 'og:image', property: 'og:image', content: `https://${productionUrl}/OG-card.png` },
       { property: 'og:image:width', content: '740' },
@@ -61,7 +62,7 @@ export default {
       { name: 'twitter:site', content: twitterUser },
       { name: 'twitter:card', content: 'summary_large_image' },
       { hid: 'twitter:url', name: 'twitter:url', content: `https://${productionUrl}` },
-      { hid: 'twitter:title', name: 'twitter:title', content: siteTitle },
+      { hid: 'twitter:title', name: 'twitter:title', content: siteName },
       { hid: 'twitter:description', name: 'twitter:description', content: siteDescription },
       { hid: 'twitter:image', name: 'twitter:image', content: `https://${productionUrl}/OG-card.png` }
     ],
@@ -120,7 +121,12 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en'
+      lang: 'en',
+      name: siteName,
+      short_name: siteShortName,
+      theme_color: '#333',
+      description: siteDescription
+
     }
   },
 
