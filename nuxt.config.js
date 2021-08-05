@@ -23,14 +23,12 @@ export default {
   ssr: false,
 
   // Environment variables
-  publicRuntimeConfig: {
-    supabaseUrl: isDev && useLocalSupabase
-      ? 'http://localhost:8000'
-      : process.env.NUXT_ENV_SUPABASE_URL,
+  env: {
+    supabaseUrl: isDev && useLocalSupabase ? 'http://localhost:8000' : process.env.VITE_SUPABASE_URL,
     supabaseKey: isDev && useLocalSupabase
-      // super-secret-jwt-token-with-at-least-32-characters-long
+    // super-secret-jwt-token-with-at-least-32-characters-long
       ? 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzdXBhYmFzZSIsImlhdCI6MTYwMzk2ODgzNCwiZXhwIjoyNTUwNjUzNjM0LCJhdWQiOiIiLCJzdWIiOiIiLCJSb2xlIjoicG9zdGdyZXMifQ.magCcozTMKNrl76Tj2dsM7XTl_YH0v0ilajzAvIlw3U'
-      : process.env.NUXT_ENV_SUPABASE_KEY
+      : process.env.VITE_SUPABASE_KEY
   },
 
   // If deploying on github pages
@@ -38,7 +36,6 @@ export default {
   router: {
     // base: '/<repository-name>/'
     base: isDev ? '/' : isGithubPages ? `/${githubRepositoryName}/` : '/',
-    // linkActiveClass: 'bg-primary bg-opacity-20 text-primary',
     linkActiveClass: 'active'
   },
 
@@ -84,6 +81,7 @@ export default {
   plugins: [
     // { src: '~/plugins/supabase', ssr: false }
   ],
+
   vite: {
     server: {
       fs: {
