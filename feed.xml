@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>NL-RSE Blog and Events</title>
+        <link>https://MY-APP-DOMAIN.netlify.app/feed.xml</link>
+        <description>NL-RSE Blog feed!</description>
+        <lastBuildDate>Thu, 05 Aug 2021 12:01:34 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/nuxt-community/feed-module</generator>
+        <item>
+            <title><![CDATA[Title of the blog post 3]]></title>
+            <link>/posts/blog-post-3</link>
+            <guid>Title of the blog post 3</guid>
+            <pubDate>Invalid Date</pubDate>
+            <content:encoded><![CDATA[
+              <p>
+                <img
+                  alt="Cover image"
+                  src="https://ak.picdn.net/shutterstock/videos/1052869340/thumb/1.jpg"
+                >
+              </p>
+              undefined
+            ]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Title of the blog post 2]]></title>
+            <link>/posts/blog-post-2</link>
+            <guid>Title of the blog post 2</guid>
+            <pubDate>Invalid Date</pubDate>
+            <content:encoded><![CDATA[
+              <p>
+                <img
+                  alt="Cover image"
+                  src="https://ak.picdn.net/shutterstock/videos/1052869340/thumb/1.jpg"
+                >
+              </p>
+              undefined
+            ]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Title of the blog post 1]]></title>
+            <link>/posts/blog-post-1</link>
+            <guid>Title of the blog post 1</guid>
+            <pubDate>Invalid Date</pubDate>
+            <content:encoded><![CDATA[
+              <p>
+                <img
+                  alt="Cover image"
+                  src="https://ak.picdn.net/shutterstock/videos/1052869340/thumb/1.jpg"
+                >
+              </p>
+              undefined
+            ]]></content:encoded>
+        </item>
+    </channel>
+</rss>
