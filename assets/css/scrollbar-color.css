@@ -2,12 +2,10 @@
 /* @import './scrollbar-color.css';  */
 
 :root {
-  --scrollbarTrack: #EAEAEA;
-  --scrollbarThumb: #888;
-  --scrollbarThumbHover: #666;
+  --scrollbarTrack: hsla(var(--b2));
+  --scrollbarThumb: hsla(var(--b3));
+  --scrollbarThumbHover: hsla(var(--b1));
 }
-
-
 /* Scrollbar colors*/
 /* width */
 ::-webkit-scrollbar {
@@ -22,6 +20,7 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--scrollbarThumb);
+  border-radius: 3px
 }
 
 /* Handle on hover */
