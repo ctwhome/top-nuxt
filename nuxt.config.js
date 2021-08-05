@@ -1,5 +1,16 @@
-const isDev = process.env.NODE_ENV === 'development'
+/// //////////////////////////////////////////////
+// Site config
+// Domain where the website will be deployed
+const productionUrl = 'MY-APP-DOMAIN.netlify.app'
 const useLocalSupabase = false
+const siteTitle = 'Ctw Nuxt Basis - Template'
+const siteDescription = 'Ctw Nuxt base template with TailwindCss, content RSS, Supabase Auth, Composition API and many other goodies'
+const twitterUser = '@ctwhome'
+const isGithubPages = false // true if deployed to github pages
+const githubRepositoryName = 'nuxt'
+/// //////////////////////////////////////////////
+
+const isDev = process.env.NODE_ENV === 'development'
 export default {
   // Debug local server from outside
   server: {
@@ -25,7 +36,9 @@ export default {
   // http://<username>.github.io/<repository-name>.
   router: {
     // base: '/<repository-name>/'
-    base: isDev ? '/' : '/nuxt/'
+    base: isDev ? '/' : isGithubPages ? `/${githubRepositoryName}/` : '/',
+    // linkActiveClass: 'bg-primary bg-opacity-20 text-primary',
+    linkActiveClass: 'active'
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -34,8 +47,23 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      // OG Social Media Cards
+      { hid: 'description', name: 'description', content: siteDescription },
+      { property: 'og:site_name', content: siteTitle },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: `https://${productionUrl}` },
+      { hid: 'og:title', property: 'og:title', content: siteTitle },
+      { hid: 'og:description', property: 'og:description', content: siteDescription },
+      { hid: 'og:image', property: 'og:image', content: `https://${productionUrl}/OG-card.png` },
+      { property: 'og:image:width', content: '740' },
+      { property: 'og:image:height', content: '300' },
+      { name: 'twitter:site', content: twitterUser },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitter:url', name: 'twitter:url', content: `https://${productionUrl}` },
+      { hid: 'twitter:title', name: 'twitter:title', content: siteTitle },
+      { hid: 'twitter:description', name: 'twitter:description', content: siteDescription },
+      { hid: 'twitter:image', name: 'twitter:image', content: `https://${productionUrl}/OG-card.png` }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -43,6 +71,7 @@ export default {
     htmlAttrs: {
       'data-theme': 'light' // https://daisyui.com/docs/default-themes
     }
+
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -55,6 +84,11 @@ export default {
     // { src: '~/plugins/supabase', ssr: false }
   ],
   vite: {
+    server: {
+      fs: {
+        strict: false
+      }
+    },
     optimizeDeps: {
       exclude: ['@supabase/supabase-js'], // Supabase
       include: ['cross-fetch', 'websocket'] // Supabase
@@ -79,7 +113,8 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/feed'
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -94,5 +129,56 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
+  // Create a feed
+  feed: [
+    {
+      path: '/feed.xml',
+      async create (feed, args) {
+        feed.options = {
+          title: 'NL-RSE Blog and Events',
+          link: isDev ? 'https://localhost:3000/feed.xml' : `https://${productionUrl}/feed.xml`,
+          description: 'NL-RSE Blog feed!'
+        }
+        const { $content } = require('@nuxt/content')
+
+        const posts = await $content('posts')
+          .sortBy('date', 'desc')
+          .fetch()
+
+        // const events = await $content('events')
+        //   .sortBy('date', 'desc')
+        //   .fetch()
+
+        const combinedPosts = [
+          ...posts
+          // ...events
+        ]
+
+        combinedPosts.forEach((post) => {
+          feed.addItem({
+            title: post.title,
+            content: `
+              <p>
+                <img
+                  alt="Cover image"
+                  src="${post.image}"
+                >
+              </p>
+              ${post.bodyHtml}
+            `,
+            id: post.title,
+            link: post.path,
+            img: post.image,
+            date: new Date(post.date)
+          })
+        })
+      },
+      cacheTime: 1000 * 60 * 15,
+      type: 'rss2',
+      data: ['some', 'info']
+    }
+  ]
+
 }
