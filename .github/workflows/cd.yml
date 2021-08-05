@@ -24,6 +24,9 @@ jobs:
         run: yarn
 
       - name: Generate
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_KEY: ${{ secrets.VITE_SUPABASE_KEY }}
         run: yarn run generate
 
       - name: Deploy
