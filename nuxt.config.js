@@ -21,6 +21,9 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   ssr: false,
+  generate: {
+    fallback: true // Be able to redirect webs to index when refreshing the page
+  },
 
   // Environment variables
   env: {
@@ -38,6 +41,8 @@ export default {
     base: isDev ? '/' : isGithubPages ? `/${githubRepositoryName}/` : '/',
     linkActiveClass: 'active'
   },
+  // Auto import components: https://go.nuxtjs.dev/config-components
+  components: true,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -93,9 +98,6 @@ export default {
       include: ['cross-fetch', 'websocket'] // Supabase
     }
   },
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
