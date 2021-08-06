@@ -12,6 +12,8 @@
   /*color: var(--text);*/
   box-sizing: border-box;
 }
+/* Fix horizontal scrollbar jumping */
+html { margin-left: calc(100vw - 100%); }
 
 body {
   font-family: "Velour", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
