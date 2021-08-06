@@ -1,7 +1,7 @@
 {
-  "name": "nuxt-basis",
-  "short_name": "nuxt-basis",
-  "description": "Template Nuxt with most common configuration to a based set with Nuxt, by Ctwhome",
+  "name": "Ctw Nuxt Basis - Template",
+  "short_name": "Nuxt Template",
+  "description": "Ctw Nuxt base template with TailwindCss, content RSS, Supabase Auth, Composition API and many other goodies",
   "icons": [
     {
       "src": "/nuxt/_nuxt/icons/icon_64x64.e3e9fb.png",
@@ -49,5 +49,6 @@
   "start_url": "/nuxt/?standalone=true",
   "display": "standalone",
   "background_color": "#ffffff",
+  "theme_color": "#333",
   "lang": "en"
 }
