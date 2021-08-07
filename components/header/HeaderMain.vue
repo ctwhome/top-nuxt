@@ -14,7 +14,7 @@
         </nuxt-link>
       </div>
     </div>
-    <header-responsive-menu ref="menu">
+    <header-responsive-menu ref="menu" class="relative">
       <div class="p-6">
         <NuxtLink to="/" @click.native="$refs.menu.close">
           <Logo class="mx-3 mt-1" />
