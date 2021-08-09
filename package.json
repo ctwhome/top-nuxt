@@ -29,6 +29,7 @@
     "imagesloaded": "^4.1.4",
     "lodash.isequal": "^4.5.0",
     "nuxt": "^2.15.7",
+    "nuxt-mq": "^2.0.2",
     "theme-change": "^2.0.2"
   },
   "devDependencies": {
