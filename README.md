@@ -19,6 +19,16 @@ npx degit ctwhome/nuxt <directory-name>
 *   Nuxt transitions
 *   Ngrok exposes your localhost to the world for easy testing and sharing!
 
+## Updaging fork
+
+```shell
+1.Add remote from original repository in your forked repository:
+$ git remote add upstream git://github.com/ctwhome/nuxt.git
+$ git fetch upstream
+2. Updating your fork from original repo to keep up with their changes:
+$ git pull upstream main
+```
+
 ## Theming
 
 DaisyUI offers the ability to theme your application with many default themes or create your own [here](https://daisyui.com/core/colors).
