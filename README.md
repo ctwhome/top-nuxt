@@ -21,13 +21,14 @@ npx degit ctwhome/nuxt <directory-name>
 
 ## Updaging fork
 
-```shell
 1.Add remote from original repository in your forked repository:
-$ git remote add upstream git://github.com/ctwhome/nuxt.git
-$ git fetch upstream
-2. Updating your fork from original repo to keep up with their changes:
-$ git pull upstream main
+```shell
+git remote add upstream git://github.com/ctwhome/nuxt.git
+git fetch upstream
 ```
+2. Updating your fork from original repo to keep up with their changes:
+```git pull upstream main```
+
 
 ## Theming
 
