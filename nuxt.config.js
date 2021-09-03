@@ -103,7 +103,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/composition-api/module',
-    'nuxt-vite'
+    // 'nuxt-vite'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
