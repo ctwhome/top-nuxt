@@ -3,7 +3,7 @@ import daisyui from 'daisyui'
 
 export default {
   darkMode: false, // or 'media' or 'class'
-  // mode: 'jit', // NOT WORKING WITH VITE issue link -> https://github.com/
+  mode: 'jit', // NOT WORKING WITH VITE issue link -> https://github.com/
   // nuxt/vite/issues/159
   // see issue https://github.com/nuxt/vite/issues/159
   plugins: [
