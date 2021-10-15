@@ -7,7 +7,7 @@ Template Nuxt with most common configuration to a based set with Nuxt, by Ctwhom
 ## Installation
 ```
 npx degit ctwhome/nuxt <directory-name>
-# Change the global variables from the nuxt.config.js
+# Change the global variables in nuxt.config.js
 ```
 
 ### Includes:
