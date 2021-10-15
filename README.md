@@ -1,4 +1,4 @@
-# Nuxt start template
+# Top Nuxt starter template, with the best development experience and performance!
 [![cd](https://github.com/ctwhome/nuxt/actions/workflows/cd.yml/badge.svg)](https://github.com/ctwhome/nuxt/actions/workflows/cd.yml)
 
 
