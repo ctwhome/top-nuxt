@@ -7,7 +7,7 @@ const siteName = 'Ctw Nuxt Basis - Template'
 const siteShortName = 'Nuxt Template'
 const siteDescription = 'Ctw Nuxt base template with TailwindCss, content RSS, Supabase Auth, Composition API and many other goodies'
 const twitterUser = '@ctwhome'
-const isGithubPages = true // true if deployed to github pages
+const isGithubPages = false // true if deployed to github pages
 const githubRepositoryName = 'nuxt'
 /// //////////////////////////////////////////////
 
@@ -20,6 +20,7 @@ export default {
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+  // ssr: false, ssr false doesn't generate static routes or nuxt images
 
   // Environment variables
   env: {
@@ -101,10 +102,31 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/composition-api/module'
+    '@nuxtjs/composition-api/module',
+    '@nuxt/image'
     // 'nuxt-vite'
   ],
 
+  image: {
+    // provider: 'static'
+    // dir: "assets/images",
+    // cloudinary: {
+    //   baseURL: 'https://res.cloudinary.com/debsobrien/image/upload/'
+    // },
+    //
+    imgix: {
+      baseURL: 'https://images.unsplash.com/'
+    }
+    // presets: {
+    //   blog: {
+    //     modifiers: {
+    //       // format: 'webp',
+    //       fit: 'cover',
+    //       quality: '60'
+    //     }
+    //   }
+    // }
+  },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/pwa

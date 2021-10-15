@@ -1,11 +1,13 @@
-# Nuxt start template
+# Top Nuxt starter template, with the best development experience and performance!
 [![cd](https://github.com/ctwhome/nuxt/actions/workflows/cd.yml/badge.svg)](https://github.com/ctwhome/nuxt/actions/workflows/cd.yml)
 
 
 Template Nuxt with most common configuration to a based set with Nuxt, by Ctwhome
 
+## Installation
 ```
 npx degit ctwhome/nuxt <directory-name>
+# Change the global variables in nuxt.config.js
 ```
 
 ### Includes:
@@ -18,6 +20,17 @@ npx degit ctwhome/nuxt <directory-name>
 *   Common VSCode settings for Nuxt and ESLint
 *   Nuxt transitions
 *   Ngrok exposes your localhost to the world for easy testing and sharing!
+
+## Updaging fork
+
+1.Add remote from original repository in your forked repository:
+```shell
+git remote add upstream git://github.com/ctwhome/nuxt.git
+git fetch upstream
+```
+2. Updating your fork from original repo to keep up with their changes:
+```git pull upstream main```
+
 
 ## Theming
 
