@@ -20,7 +20,6 @@ export default {
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-  ssr: false,
 
   // Environment variables
   env: {
@@ -102,7 +101,7 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/composition-api/module',
+    '@nuxtjs/composition-api/module'
     // 'nuxt-vite'
   ],
 
