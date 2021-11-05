@@ -1,0 +1,20 @@
+# Load this file on a different i18n editor is possible.
+page1:
+  en: Page 1
+  nl: Pagina 1
+  es: Página 1
+
+page2:
+  en: Page 2
+  nl: Pagina 2
+  es: Página 2
+
+page3:
+  en: Page 3
+  nl: Pagina 3
+  es: Página 3
+
+page4:
+  en: Page 4
+  nl: Pagina 4
+  es: Página 4

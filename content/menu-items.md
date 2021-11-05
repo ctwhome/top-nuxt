@@ -1,15 +1,15 @@
 ---
 items:
-  - title: Page 1
+  - title: page1
     path: /pages/page-1
     
-  - title: Page 2
+  - title: page2
     path: /pages/page-2
     
-  - title: Page 3
+  - title: page3
     path: /pages/page-3
     
-  - title: Page 4
+  - title: page4
     path: /pages/page-4
 ---
 

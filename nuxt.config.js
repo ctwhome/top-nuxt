@@ -1,3 +1,5 @@
+import lang from './locale/lang'
+
 /// //////////////////////////////////////////////
 // Site config
 // Domain where the website will be deployed
@@ -84,6 +86,7 @@ export default {
     // { src: '~/plugins/supabase', ssr: false }
   ],
 
+  // Vite is not compatible with Nuxt Content and TailwindCss JIT yet.
   vite: {
     server: {
       fs: {
@@ -102,8 +105,8 @@ export default {
     // '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/composition-api/module'
-    // '@nuxt/image'
+    '@nuxtjs/composition-api/module',
+    '@nuxt/image'
     // 'nuxt-vite'
   ],
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -111,8 +114,8 @@ export default {
     // https://go.nuxtjs.dev/pwa
     // '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
-    // '@nuxt/content',
-    // '@nuxtjs/feed',
+    '@nuxt/content',
+    '@nuxtjs/feed',
     [
       'nuxt-mq',
       {
@@ -127,8 +130,28 @@ export default {
           '2xl': 1536
         }
       }
-    ]
+    ],
+    '@nuxtjs/i18n'
   ],
+
+  i18n: {
+    // To leverage the SEO benefits, you must configure the locales option as an array
+    // of objects, where each object has an iso option set to the language's ISO code and
+    // the base url
+    // More details https://i18n.nuxtjs.org/seo#feature-details
+    baseUrl: productionUrl,
+    locales: [
+      { code: 'en', iso: 'en-US' },
+      { code: 'es', iso: 'es-ES' },
+      { code: 'nl', iso: 'nl-NL' }
+    ],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: lang
+    }
+  },
+
   image: {
     // provider: 'static'
     // dir: "assets/images",

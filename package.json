@@ -19,6 +19,7 @@
     "@nuxt/content": "^1.15.0",
     "@nuxtjs/composition-api": "^0.29.3",
     "@nuxtjs/feed": "^2.0.0",
+    "@nuxtjs/i18n": "^7.2.0",
     "@nuxtjs/ngrok": "^2.0.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@supabase/supabase-js": "^1.25.2",
@@ -43,6 +44,7 @@
     "eslint-plugin-nuxt": "^3.0.0",
     "eslint-plugin-vue": "^8.0.3",
     "husky": "^7.0.4",
+    "js-yaml": "^4.1.0",
     "nuxt-vite": "^0.3.5",
     "postcss": "^8.3.11"
   }

@@ -12,14 +12,15 @@ npx degit ctwhome/nuxt <directory-name>
 
 ### Includes:
 
-*   Nuxt Vite (Experimental with issues, TailwindCSS JIT not working with nuxt-vite: [issue](https://github.com/nuxt/vite/issues/159))
-*   Nuxt content
-*   TailwindCss with JIT
-*   DaisyUI for Tailwindcss
-*   ESLint with 'fix on save'
-*   Common VSCode settings for Nuxt and ESLint
-*   Nuxt transitions
-*   Ngrok exposes your localhost to the world for easy testing and sharing!
+* Nuxt Vite (Experimental with issues, TailwindCSS JIT not working with nuxt-vite: [issue](https://github.com/nuxt/vite/issues/159))
+* Nuxt content
+* i18n with custom YAML file for easy locale editing
+* TailwindCss with JIT
+* DaisyUI for Tailwindcss
+* ESLint with 'fix on save'
+* Common VSCode settings for Nuxt and ESLint
+* Nuxt transitions
+* Ngrok exposes your localhost to the world for easy testing and sharing!
 
 ## Updaging fork
 
