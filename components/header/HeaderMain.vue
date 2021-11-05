@@ -29,7 +29,7 @@
       </div>
     </header-responsive-menu>
 
-    <daisyui-theme-switcher class=" ml-auto" />
+    <daisyui-theme-switcher class="ml-auto" />
     <user-login-button class="mt-2 pr-4" />
   </header>
 </template>

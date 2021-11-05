@@ -33,11 +33,8 @@ git fetch upstream
 
 
 ## Theming
-
 DaisyUI offers the ability to theme your application with many default themes or create your own [here](https://daisyui.com/core/colors).
-
 Daisy UI has the next utility classes where the theme will be applied (check the previous link for more details):
-
 ```
     bg-{COLOR_NAME}
     text-{COLOR_NAME}
@@ -48,10 +45,6 @@ Daisy UI has the next utility classes where the theme will be applied (check the
     placeholder-{COLOR_NAME}
     divide-{COLOR_NAME}
     ring-{COLOR_NAME}
-
-
-
-
     ring-offset-{COLOR_NAME}
 ```
 
@@ -76,7 +69,7 @@ $ yarn start
 $ yarn generate
 
 # generate and local test
-$ yarn enerate && yarn star yarn generate && yarn start
+$ yarn generate && yarn star
 ```
 
 For a detailed explanation of how things work, check out the [documentation](https://nuxtjs.org).
