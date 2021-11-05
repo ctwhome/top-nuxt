@@ -43,7 +43,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt-basis',
+    title: 'top-nuxt',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -99,14 +99,36 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
+    // '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/composition-api/module',
-    '@nuxt/image'
+    '@nuxtjs/composition-api/module'
+    // '@nuxt/image'
     // 'nuxt-vite'
   ],
-
+  // Modules: https://go.nuxtjs.dev/config-modules
+  modules: [
+    // https://go.nuxtjs.dev/pwa
+    // '@nuxtjs/pwa',
+    // https://go.nuxtjs.dev/content
+    // '@nuxt/content',
+    // '@nuxtjs/feed',
+    [
+      'nuxt-mq',
+      {
+        // use with $mq
+        // Default breakpoint for SSR
+        defaultBreakpoint: 'sm',
+        breakpoints: {
+          sm: 640,
+          md: 768,
+          lg: 1024,
+          xl: 1280,
+          '2xl': 1536
+        }
+      }
+    ]
+  ],
   image: {
     // provider: 'static'
     // dir: "assets/images",
@@ -127,29 +149,6 @@ export default {
     //   }
     // }
   },
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content',
-    '@nuxtjs/feed',
-    [
-      'nuxt-mq',
-      {
-        // use with $mq
-        // Default breakpoint for SSR
-        defaultBreakpoint: 'sm',
-        breakpoints: {
-          sm: 640,
-          md: 768,
-          lg: 1024,
-          xl: 1280,
-          '2xl': 1536
-        }
-      }
-    ]
-  ],
 
   generate: {
     fallback: true, // Be able to redirect webs to index when refreshing the page

@@ -18,6 +18,7 @@ module.exports = {
   rules: {
     'no-console': 'off',
     'vue/no-reserved-props': 'off',
-    'vue/first-attribute-linebreak': 'off'
+    'vue/first-attribute-linebreak': 'off',
+    'vue/multi-word-component-names': 'off'
   }
 }
