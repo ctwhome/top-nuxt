@@ -4,7 +4,7 @@
         <title>NL-RSE Blog and Events</title>
         <link>https://MY-APP-DOMAIN.netlify.app/feed.xml</link>
         <description>NL-RSE Blog feed!</description>
-        <lastBuildDate>Fri, 05 Nov 2021 13:46:16 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 27 Dec 2021 13:45:58 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/nuxt-community/feed-module</generator>
         <item>
