@@ -1,6 +1,7 @@
 # Top Nuxt starter template, with the best development experience and performance!
 [![cd](https://github.com/ctwhome/nuxt/actions/workflows/cd.yml/badge.svg)](https://github.com/ctwhome/nuxt/actions/workflows/cd.yml)
 
+> [See Top-Nuxt3 tempaplate for Nuxt3 version](https://github.com/ctwhome/top-nuxt3)
 
 Template Nuxt with most common configuration to a based set with Nuxt, by Ctwhome
 
@@ -26,7 +27,7 @@ npx degit ctwhome/nuxt <directory-name>
 
 1.Add remote from original repository in your forked repository:
 ```shell
-git remote add upstream git://github.com/ctwhome/nuxt.git
+git remote add upstream git://github.com/ctwhome/top-nuxt.git
 git fetch upstream
 ```
 2. Updating your fork from original repo to keep up with their changes:
