@@ -1,4 +1,4 @@
-# Top Nuxt starter template, with the best development experience and performance!
+# Top Nuxt 2 starter template, with the best development experience and performance!
 [![cd](https://github.com/ctwhome/nuxt/actions/workflows/cd.yml/badge.svg)](https://github.com/ctwhome/nuxt/actions/workflows/cd.yml)
 
 > [See Top-Nuxt3 tempaplate for Nuxt3 version](https://github.com/ctwhome/top-nuxt3)
